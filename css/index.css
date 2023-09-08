@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap'); /*Titulos font-family: 'Ysabeau', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* Texto normal font-family: 'Alumni Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+/*Titulos font-family: 'Ysabeau', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Texto normal font-family: 'Alumni Sans', sans-serif;*/
 
-:root{
+:root {
     --fondo: #626567;
     --hover: #BDC3C7;
     --titulos: #909497;
@@ -13,6 +15,19 @@
 body {
     background-color: #F8F9F9;
     font-family: 'Alumni Sans', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--subtitulo);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--fondo);
+    border-radius: 20px;
 }
 
 header {
@@ -34,19 +49,19 @@ header ul li {
     margin-top: 10px;
 }
 
-header ul li :hover{
+header ul li :hover {
     background-color: var(--hover);
     color: var(--fondo);
 }
 
-header ul li a{
+header ul li a {
     text-decoration: none;
     color: var(--parrafos);
     padding: 10px;
     font-weight: bold;
 }
 
-#imagenPrincipal{
+#imagenPrincipal {
     width: auto;
     height: 100px;
     text-align: center;
@@ -54,7 +69,7 @@ header ul li a{
     border: #626567 solid 1px;
 }
 
-h1{
+h1 {
     font-family: 'Ysabeau', sans-serif;
     color: var(--titulos);
     text-align: center;
@@ -64,29 +79,29 @@ h1{
     border: #626567 solid 1px;
 }
 
-#descripcionPrincipal p{
+#descripcionPrincipal p {
     background-color: var(--hover);
     font-style: italic;
     padding: 20px;
     margin: 10px;
 }
 
-#tiposArtesanias ul{
+#tiposArtesanias ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4,auto);    
+    grid-template-columns: repeat(4, auto);
     grid-gap: 15px;
     justify-content: center;
     margin: 10px auto;
     padding: 10px;
 }
 
-#tiposArtesanias img{
+#tiposArtesanias img {
     width: 200px;
     height: auto;
 }
 
-#tiposArtesanias img:hover{
+#tiposArtesanias img:hover {
     border: #909497 solid 2px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -95,10 +110,56 @@ h1{
     -o-border-radius: 10px;
 }
 
-.feriaTarjeta{
-    display: inline;
-    width: 200px;
-    border: #626567 solid 1px;
-    margin: 10px;
+#ferias {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    height: fit-content;
+    overflow-y: auto;
+    justify-content: center;
+}
+
+#ferias::-webkit-scrollbar {
+    height: 7px;
+}
+
+#ferias::-webkit-scrollbar-track {
+    background: var(--subtitulo);
+}
+
+#ferias::-webkit-scrollbar-thumb {
     background-color: var(--fondo);
+    border-radius: 20px;
+}
+
+#ferias article {
+    background-color: var(--titulos);
+    border: #BDC3C7 solid 3px;
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#ferias article img {
+    width: 220px;
+    height: 170px;
+    margin: 2px;
+}
+
+#ferias article h2 {
+    font-family: 'Ysabeau', sans-serif;
+    color: var(--bordes);
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#ferias article p {
+    color: var(--parrafos);
+    text-align: justify;
+    padding: 2px;
+}
+
+.feriaInformacion{
+    border: #F8F9F9 solid 1px;
+    
 }
