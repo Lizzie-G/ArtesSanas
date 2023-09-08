@@ -1,24 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Ysabeau:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap'); /*Titulos font-family: 'Ysabeau', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* Texto normal font-family: 'Alumni Sans', sans-serif;*/
 
-body{
-    background-color: bisque;
+:root{
+    --fondo: #626567;
+    --hover: #BDC3C7;
+    --titulos: #909497;
+    --subtitulo: #A6ACAF;
+    --parrafos: #CACFD2;
+    --bordes: #F2F3F4;
 }
 
-header{
+body {
+    background-color: #F8F9F9;
+    font-family: 'Alumni Sans', sans-serif;
+}
+
+header {
+    background-color: var(--fondo);
     width: 100%;
-    height: 130px;
-    display: inline-flex;
-    margin-bottom: 1em;
+    height: 45px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-#imagenPrincipal img{
-    width: 100%;
-    height: 70px;
-    float: ;
+header ul {
+    display: inline;
+    height: 44px;
 }
 
-header h1{
+header ul li {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+header ul li :hover{
+    background-color: var(--hover);
+    color: var(--fondo);
+}
+
+header ul li a{
+    text-decoration: none;
+    color: var(--parrafos);
     padding: 10px;
+    font-weight: bold;
+}
+
+#imagenPrincipal{
+    width: auto;
+    height: 100px;
+    text-align: center;
+    margin: 10px;
+    border: #626567 solid 1px;
+}
+
+h1{
     font-family: 'Ysabeau', sans-serif;
+    color: var(--titulos);
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    margin: 10px;
+    border: #626567 solid 1px;
+}
+
+#descripcionPrincipal p{
+    background-color: var(--hover);
+    font-style: italic;
+    padding: 20px;
+    margin: 10px;
+}
+
+#tiposArtesanias ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4,auto);    
+    grid-gap: 15px;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#tiposArtesanias img{
+    width: 200px;
+    height: auto;
+}
+
+#tiposArtesanias img:hover{
+    border: #909497 solid 2px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.feriaTarjeta{
+    display: inline;
+    width: 200px;
+    border: #626567 solid 1px;
+    margin: 10px;
+    background-color: var(--fondo);
 }
