@@ -36,6 +36,8 @@ header {
     height: 45px;
     margin-bottom: 10px;
     text-align: center;
+    position: fixed;
+    top: 0;
 }
 
 header ul {
@@ -66,7 +68,7 @@ header ul li a {
     height: 100px;
     text-align: center;
     margin: 10px;
-    border: #626567 solid 1px;
+    border: #626567 
 }
 
 h1 {
@@ -113,7 +115,6 @@ h1 {
 #ferias {
     display: flex;
     height: fit-content;
-    width: 600px;
     overflow-y: auto;
 }
 
@@ -136,7 +137,7 @@ h1 {
 
 #ferias article {
     background-color: var(--titulos);
-    border: #BDC3C7 solid 3px;
+    border: #BDC3C7  3px;
     width: 250px;
     padding: 10px;
     margin: 10px;
@@ -162,7 +163,15 @@ h1 {
 }
 
 #ferias article a {
+    background-color: var(--hover);
     text-decoration: none;
     color: var(--fondo);
-    margin: auto 65px;
+    padding: 5px 10px;
+    margin: auto 58px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
+
