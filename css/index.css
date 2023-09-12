@@ -111,12 +111,10 @@ h1 {
 }
 
 #ferias {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
+    display: flex;
     height: fit-content;
+    width: 600px;
     overflow-y: auto;
-    justify-content: center;
 }
 
 #ferias::-webkit-scrollbar {
@@ -130,6 +128,10 @@ h1 {
 #ferias::-webkit-scrollbar-thumb {
     background-color: var(--fondo);
     border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 #ferias article {
@@ -159,7 +161,8 @@ h1 {
     padding: 2px;
 }
 
-.feriaInformacion{
-    border: #F8F9F9 solid 1px;
-    
+#ferias article a {
+    text-decoration: none;
+    color: var(--fondo);
+    margin: auto 65px;
 }
