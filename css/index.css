@@ -15,6 +15,7 @@
 body {
     background-color: #F8F9F9;
     font-family: 'Alumni Sans', sans-serif;
+    color: var(--parrafos);
 }
 
 body::-webkit-scrollbar {
@@ -35,6 +36,7 @@ header {
     width: 100%;
     height: 45px;
     margin-bottom: 10px;
+    font-size: 20px;
     text-align: center;
     position: fixed;
     top: 0;
@@ -60,41 +62,57 @@ header ul li a {
     text-decoration: none;
     color: var(--parrafos);
     padding: 10px;
-    font-weight: bold;
 }
 
-#imagenPrincipal {
-    width: auto;
+.grid .aside {
+    background-color: yellow;
+    grid-area: aside;
+}
+
+.grid .aside img {
+    width: 100%;
     height: 150px;
-    margin: 10px;
+    padding: 0px 100px;
+    object-fit: contain;
     border: #626567;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-}
-
-h1 {
-    font-family: 'Ysabeau', sans-serif;
-    color: var(--titulos);
-    padding: 10px;
-    margin: 10px;
     text-align: center;
-    max-width: 1200px;
-    object-position: center;
-    border: #626567 solid 1px;
 }
 
-#descripcionPrincipal p {
-    background-color: var(--hover);
+.grid .aside h1 {
+    font-family: 'Ysabeau', sans-serif;
+    text-align: center;
+    color: var(--titulos);
+}
+
+.grid .descrip {
+    background-color: var(--fondo);
+    grid-area: descrip;
+    padding: 10px;
+    display: grid;
+    place-content: center;
+}
+
+
+.grid .descrip p {
     font-style: italic;
-    padding: 20px;
-    margin: 10px;
-    max-width: 1200px;
-    object-position: center;
+    text-align: center;
+    font-size: 20px;
 }
 
-#tiposArtesanias ul {
+.grid .tipos {
+    background-color: purple;
+    grid-area: tipos;
+    display: grid;
+    place-content: center;
+}
+
+.grid .tipos img {
+    width: 200px;
+    height: auto;
+}
+
+.grid .tipos ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -105,12 +123,7 @@ h1 {
     max-width: 1023px;
 }
 
-#tiposArtesanias img {
-    width: 200px;
-    height: auto;
-}
-
-#tiposArtesanias img:hover {
+.grid .tipos img:hover {
     border: #909497 solid 2px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -119,22 +132,27 @@ h1 {
     -o-border-radius: 10px;
 }
 
-#ferias {
+.grid .ferias {
+    background-color: blue;
+    grid-area: ferias;
+}
+
+.grid .ferias {
     display: flex;
     height: fit-content;
     justify-content: center;
     overflow-y: auto;
 }
 
-#ferias::-webkit-scrollbar {
+.grid .ferias::-webkit-scrollbar {
     height: 7px;
 }
 
-#ferias::-webkit-scrollbar-track {
+.grid .ferias::-webkit-scrollbar-track {
     background: var(--subtitulo);
 }
 
-#ferias::-webkit-scrollbar-thumb {
+.grid .ferias::-webkit-scrollbar-thumb {
     background-color: var(--fondo);
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -143,7 +161,7 @@ h1 {
     -o-border-radius: 20px;
 }
 
-#ferias article {
+.grid .ferias article {
     background-color: var(--titulos);
     border: #BDC3C7  3px;
     width: 250px;
@@ -151,26 +169,26 @@ h1 {
     margin: 10px;
 }
 
-#ferias article img {
+.grid .ferias article img {
     width: 220px;
     height: 170px;
     margin: 2px;
 }
 
-#ferias article h2 {
+.grid .ferias article h2 {
     font-family: 'Ysabeau', sans-serif;
     color: var(--bordes);
     justify-content: center;
     margin-top: 10px;
 }
 
-#ferias article p {
+.grid .ferias article p {
     color: var(--parrafos);
     text-align: justify;
     padding: 2px;
 }
 
-#ferias article a {
+.grid .ferias article a {
     background-color: var(--hover);
     text-decoration: none;
     color: var(--fondo);
@@ -183,3 +201,32 @@ h1 {
     -o-border-radius: 8px;
 }
 
+.grid .footer {
+    background-color: green;
+    grid-area: footer;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 200px);
+    grid-template-areas: "aside aside aside"
+                         "descrip tipos tipos"
+                         "descrip tipos tipos"
+                         "descrip tipos tipos"
+                         "ferias ferias ferias"
+                         "ferias ferias ferias"
+                         "ferias ferias ferias"
+                         "footer footer footer";
+    padding-top: 40px;
+}
+
+/* Empieza la media tablet
+@media (min-width: 480px) {
+    .tres-columnas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+} */
