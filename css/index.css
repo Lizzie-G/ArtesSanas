@@ -138,8 +138,8 @@ header ul li a {
 }
 
 .grid .ferias {
-    display: flex;
-    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     justify-content: center;
     overflow-y: auto;
 }
@@ -163,16 +163,18 @@ header ul li a {
 
 .grid .ferias article {
     background-color: var(--titulos);
-    border: #BDC3C7  3px;
+    border: #BDC3C7 3px;
     width: 250px;
     padding: 10px;
     margin: 10px;
 }
 
 .grid .ferias article img {
-    width: 220px;
-    height: 170px;
+    width: 225px;
+    height: 340px;
     margin: 2px;
+    display: grid;
+    place-content: center;
 }
 
 .grid .ferias article h2 {
@@ -202,8 +204,29 @@ header ul li a {
 }
 
 .grid .footer {
-    background-color: green;
+    background-color: var(--fondo);
     grid-area: footer;
+    display: inline;
+}
+
+.grid .footer img {
+    width: 150px;
+    display: inline-block;
+}
+
+.grid .footer caption{
+    display: ;
+}
+
+.grid .footer ul {
+    display: inline;
+    height: 44px;
+}
+
+.grid .footer ul li {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
 }
 
 .grid {
